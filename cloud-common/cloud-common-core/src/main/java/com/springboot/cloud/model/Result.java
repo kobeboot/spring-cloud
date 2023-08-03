@@ -1,6 +1,5 @@
 package com.springboot.cloud.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.springboot.cloud.exception.BaseException;
 import com.springboot.cloud.exception.ErrorType;
 import com.springboot.cloud.exception.SystemErrorType;
@@ -90,12 +89,10 @@ public class Result<T> {
         return new Result<>(errorType, data);
     }
 
-    @JsonIgnore
     public boolean isSuccess() {
         return SUCCESS_CODE.equals(this.code);
     }
 
-    @JsonIgnore
     public boolean isFail() {
         return !isSuccess();
     }
