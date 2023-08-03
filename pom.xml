@@ -16,6 +16,7 @@
     </modules>
 
     <profiles>
+        <!-- 测试环境 -->
         <profile>
             <id>test</id>
             <activation>
@@ -25,6 +26,7 @@
                 <spring.profiles.active>test</spring.profiles.active>
             </properties>
         </profile>
+        <!-- 开发环境 -->
         <profile>
             <id>dev</id>
             <activation>
