@@ -5,8 +5,7 @@ import com.springboot.cloud.exception.ErrorType;
 import com.springboot.cloud.exception.SystemErrorType;
 import lombok.Data;
 
-import java.time.Instant;
-import java.time.ZonedDateTime;
+import java.text.SimpleDateFormat;
 
 @Data
 public class Result<T> {
@@ -24,25 +23,21 @@ public class Result<T> {
     /**
      * 处理时间time
      */
-    private Instant time;
+    private String time;
 
     /**
      * 处理结果响应数据
      */
     private T data;
 
-    public static final String SUCCESS_CODE = "200";
-
-    public static final String SUCCESS_MESG = "处理成功";
-
     public Result() {
-        this.time = ZonedDateTime.now().toInstant();
+        this.time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").format(System.currentTimeMillis());
     }
 
     public Result(ErrorType errorType) {
         this.code = errorType.getCode();
         this.mesg = errorType.getMesg();
-        this.time = ZonedDateTime.now().toInstant();
+        this.time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").format(System.currentTimeMillis());
     }
 
     public Result(ErrorType errorType, T data) {
@@ -54,11 +49,11 @@ public class Result<T> {
         this.code = code;
         this.mesg = mesg;
         this.data = data;
-        this.time = ZonedDateTime.now().toInstant();
+        this.time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS").format(System.currentTimeMillis());
     }
 
     public static Result<?> success(Object data) {
-        return new Result<>(SUCCESS_CODE, SUCCESS_MESG, data);
+        return new Result<>("200", "success", data);
     }
 
     public static Result<?> success() {
@@ -87,14 +82,6 @@ public class Result<T> {
 
     public static Result<?> fail(ErrorType errorType, Object data) {
         return new Result<>(errorType, data);
-    }
-
-    public boolean isSuccess() {
-        return SUCCESS_CODE.equals(this.code);
-    }
-
-    public boolean isFail() {
-        return !isSuccess();
     }
 
 }
