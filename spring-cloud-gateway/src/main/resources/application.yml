@@ -1,0 +1,25 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: spring-cloud-gateway
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      discovery:
+        namespace: 74050d70-8234-4c7b-85af-2626f9801fe3
+        group: DEFAULT_GROUP
+        server-addr: localhost:8848
+      config:
+        file-extension: yaml
+        prefix: spring-cloud
+        namespace: 74050d70-8234-4c7b-85af-2626f9801fe3
+        auto-refresh: true
+        enable-remote-sync-config: true
+        timeout: 3000
+        group: DEFAULT_GROUP
+        refresh-enabled: true
+        server-addr: localhost:8848
+
+
