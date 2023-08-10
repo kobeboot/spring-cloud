@@ -13,7 +13,8 @@
 
     <modules>
         <module>cloud-common</module>
-        <module>spring-cloud-gateway</module>
+        <module>cloud-gateway</module>
+        <module>cloud-nacos</module>
     </modules>
 
 <!--    <parent>-->
