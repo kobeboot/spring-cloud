@@ -15,6 +15,7 @@
         <module>cloud-common-core</module>
         <module>cloud-common-web</module>
         <module>cloud-common-redis</module>
+        <module>cloud-common-datasource</module>
     </modules>
     <packaging>pom</packaging>
     <artifactId>cloud-common</artifactId>
