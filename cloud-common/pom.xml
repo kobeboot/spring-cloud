@@ -16,6 +16,8 @@
         <module>cloud-common-web</module>
         <module>cloud-common-redis</module>
         <module>cloud-common-datasource</module>
+        <module>cloud-common-swagger</module>
+        <module>cloud-common-oss</module>
     </modules>
     <packaging>pom</packaging>
     <artifactId>cloud-common</artifactId>
