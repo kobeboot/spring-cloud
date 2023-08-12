@@ -79,7 +79,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!--使用 lombok 简化 Java 代码-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
