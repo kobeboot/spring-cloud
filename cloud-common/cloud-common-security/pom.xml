@@ -5,26 +5,19 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.springboot.cloud</groupId>
-        <artifactId>spring-cloud</artifactId>
+        <artifactId>cloud-common</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>cloud-nacos</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>cloud-nacos</name>
+    <name>cloud-common-security</name>
     <packaging>jar</packaging>
+    <artifactId>cloud-common-security</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-    </dependencies>
 
 </project>
