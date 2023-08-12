@@ -20,6 +20,7 @@
         <module>cloud-common-oss</module>
         <module>cloud-common-seata</module>
         <module>cloud-common-security</module>
+        <module>cloud-common-nacos</module>
     </modules>
     <packaging>pom</packaging>
     <artifactId>cloud-common</artifactId>
